@@ -1,3 +1,21 @@
+// 🚀 Restrict Mobile Access
+function checkDevice() {
+    if (window.innerWidth < 768) {
+        document.body.innerHTML = `
+            <div style="text-align:center; padding: 50px;">
+                <h2>📵 Not Accessible on Mobile</h2>
+                <p>Please use a PC or Tablet to access this site.</p>
+            </div>`;
+    }
+}
+
+// Run on Load
+window.onload = checkDevice;
+
+// Also check on Resize
+window.onresize = checkDevice;
+
+
 document.addEventListener('DOMContentLoaded', function () {
     // Smooth scrolling for navigation links
     document.querySelectorAll('nav a').forEach(anchor => {
