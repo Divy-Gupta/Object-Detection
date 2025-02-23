@@ -24,7 +24,7 @@ st.title("Object Detection")
 url = 'file:///C:/Users/HP/OneDrive/Desktop/object%20detection%20website/p1.html'
 
 if st.button('About Us'):
-    webbrowser.open_new_tab("https://github.com/Divy-Gupta/Object-Detection/tree/main")
+    st.markdown('<meta http-equiv="refresh" content="0; url=https://github.com/Divy-Gupta/Object-Detection/tree/main">', unsafe_allow_html=True)
 
 # Sidebar
 st.sidebar.header("Settings")
@@ -88,7 +88,7 @@ if source_radio == settings.IMAGE:
             display_image(default_detected_image_path, 'Detected Image')
 
 elif source_radio == settings.WEBCAM:
-     st.write("Sorry for inconvenience but streamlit cloud doesn't support webcam!!")
+     st.error("Sorry for inconvenience but streamlit cloud doesn't support webcam!!")
 elif source_radio == settings.YOUTUBE:
     helper.play_youtube_video(confidence, model)
 
