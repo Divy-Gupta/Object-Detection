@@ -10,7 +10,7 @@ import PIL.Image
 import settings
 import helper
 import webbrowser
-
+import streamlit as st 
 # Setting page layout
 st.set_page_config(
     page_title="Object Detection",
