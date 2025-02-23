@@ -153,22 +153,9 @@ function toggleMute() {
     }
 }
 function tryObjectDetection() {
-    console.log("Trying to load object detection...");
-    const iframe = document.getElementById("objectDetectionFrame");
-
-    if (iframe) {
-        iframe.src = "https://embed.streamlit.app/?url=https://object-detection-4you.streamlit.app/";
-        console.log("Iframe src set to:", iframe.src);
-
-        document.getElementById("objectDetectionContainer").style.display = "block";
-        document.getElementById("tryObjectDetectionBtn").style.display = "none";
-        document.getElementById("closeObjectDetectionBtn").style.display = "block";
-        document.getElementById("fullScreenBtn").style.display = "block";
-    } else {
-        console.error('❌ Object Detection iframe not found!');
-    }
+    console.log("Opening object detection in a new tab...");
+    window.open("https://object-detection-4you.streamlit.app/", "_blank");
 }
-
 
 
 function closeObjectDetection() {
