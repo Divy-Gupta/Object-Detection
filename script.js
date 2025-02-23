@@ -152,13 +152,12 @@ function toggleMute() {
         muteButton.textContent = video.muted ? 'Unmute' : 'Mute';
     }
 }
-
 function tryObjectDetection() {
     console.log("Trying to load object detection...");
     const iframe = document.getElementById("objectDetectionFrame");
 
     if (iframe) {
-        iframe.src = "https://object-detection-4you.streamlit.app/?t=" + new Date().getTime();  // Prevents caching
+        iframe.src = "https://embed.streamlit.app/?url=https://object-detection-4you.streamlit.app/";
         console.log("Iframe src set to:", iframe.src);
 
         document.getElementById("objectDetectionContainer").style.display = "block";
@@ -169,6 +168,7 @@ function tryObjectDetection() {
         console.error('❌ Object Detection iframe not found!');
     }
 }
+
 
 
 function closeObjectDetection() {
