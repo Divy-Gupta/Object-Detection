@@ -12,10 +12,18 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
             this.classList.add('active');
         });
-    });
-document.getElementById('mobile-number').addEventListener('input', function (e) {
-        this.value = this.value.replace(/[^0-9+]/g , ' ');  // Remove anything that's not a number or a plus sign
-    });
+    });document.addEventListener('DOMContentLoaded', function () {
+    const mobileInput = document.getElementById('mobile-number');
+
+    if (mobileInput) {
+        mobileInput.addEventListener('input', function (e) {
+            this.value = this.value.replace(/[^0-9+]/g , ''); // Remove anything that's not a number or a plus sign
+        });
+    } else {
+        console.error("Error: #mobile-number element not found in DOM!");
+    }
+});
+
     // Adding space between the country code and mobile number input (if not handled by CSS)
     document.getElementById('country-code').style.marginRight = "10px";  // Adds space between country code and input field
     
