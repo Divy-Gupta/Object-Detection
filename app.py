@@ -26,7 +26,7 @@ st.title("Object Detection")
 url = 'file:///C:/Users/HP/OneDrive/Desktop/object%20detection%20website/index.html'
 
 if st.button('About Us'):
-    webbrowser.open_new_tab("https://github.com/Divy-Gupta/Object-Detection")
+    st.markdown('[About Us](https://divy-gupta.github.io/Object-Detection/)')
 
 # Sidebar
 st.sidebar.header("Settings")
