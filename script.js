@@ -156,19 +156,20 @@ function toggleMute() {
 function tryObjectDetection() {
     console.log("Trying to load object detection...");
     const iframe = document.getElementById("objectDetectionFrame");
-    
-    if (iframe) {
-        iframe.src = "https://object-detection-4you.streamlit.app/"; // Streamlit App URL
 
-        // Show the iframe and buttons
+    if (iframe) {
+        iframe.src = "https://object-detection-4you.streamlit.app/?t=" + new Date().getTime();  // Prevents caching
+        console.log("Iframe src set to:", iframe.src);
+
         document.getElementById("objectDetectionContainer").style.display = "block";
         document.getElementById("tryObjectDetectionBtn").style.display = "none";
         document.getElementById("closeObjectDetectionBtn").style.display = "block";
-        document.getElementById("fullScreenBtn").style.display = "block";  // Show "Full Screen" button
+        document.getElementById("fullScreenBtn").style.display = "block";
     } else {
-        console.error('Object Detection iframe not found!');
+        console.error('❌ Object Detection iframe not found!');
     }
 }
+
 
 function closeObjectDetection() {
     const iframe = document.getElementById("objectDetectionFrame");
