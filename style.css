@@ -91,7 +91,7 @@ button.cta-button {
 }
 #scrollToTopBtn:hover {
     background-color: orange; /* Button ka background orange ho jayega hover pe */
-    color: white; /* Text white ho jayega */
+    color: black; /* Text white ho jayega */
     transition: 0.3s; /* Smooth effect */
 }
 
