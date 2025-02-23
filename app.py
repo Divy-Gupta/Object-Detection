@@ -22,8 +22,8 @@ st.set_page_config(
 # Main page heading
 st.title("Object Detection")
 url = 'file:///C:/Users/HP/OneDrive/Desktop/object%20detection%20website/p1.html'
-if st.button('About Us'):
-    st.markdown('<a href="https://github.com/Divy-Gupta/Object-Detection/tree/main" target="_blank">Click here to visit About Us</a>', unsafe_allow_html=True)
+
+st.link_button("About Us", "https://github.com/Divy-Gupta/Object-Detection/tree/main")
 
 # Sidebar
 st.sidebar.header("Settings")
