@@ -89,6 +89,11 @@ button.cta-button {
     transition: background-color 0.3s ease; /* Smooth transition */
     display: inline-block; /* Align inline */
 }
+#scrollToTopBtn:hover {
+    background-color: orange; /* Button ka background orange ho jayega hover pe */
+    color: white; /* Text white ho jayega */
+    transition: 0.3s; /* Smooth effect */
+}
 
 .btn:hover {
     background-color: #ff3b00; /* Darker shade for hover effect */
