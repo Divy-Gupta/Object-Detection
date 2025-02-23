@@ -7,7 +7,6 @@ except RuntimeError:
 
 import streamlit as st
 
-
 from pathlib import Path
 import PIL.Image
 import settings
