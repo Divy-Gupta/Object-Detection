@@ -23,10 +23,16 @@ document.addEventListener('DOMContentLoaded', function () {
         console.error("Error: #mobile-number element not found in DOM!");
     }
 });
+document.addEventListener('DOMContentLoaded', function () {
+    const countryCode = document.getElementById('country-code');
 
-    // Adding space between the country code and mobile number input (if not handled by CSS)
-    document.getElementById('country-code').style.marginRight = "10px";  // Adds space between country code and input field
-    
+    if (countryCode) {
+        countryCode.style.marginRight = "10px";  // Adds space between country code and input field
+    } else {
+        console.error("Error: #country-code element not found in DOM!");
+    }
+});
+
     // Apply dark mode on page load if user preference is stored
     const savedDarkMode = localStorage.getItem("darkMode");
     if (savedDarkMode === "true") {
