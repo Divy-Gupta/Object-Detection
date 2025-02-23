@@ -1,9 +1,10 @@
-ultralytics
 streamlit
 opencv-python-headless
-numpy
-pillow
+Pillow
 torch
 torchvision
-torchaudio
-pytube
+ultralytics
+numpy
+matplotlib
+requests
+yolov5
