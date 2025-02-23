@@ -176,8 +176,10 @@ function tryObjectDetection() {
 }
 
 function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth' // Smooth scrolling
-    });
+    const homeSection = document.getElementById("home"); // Home section ka ID ensure kar
+    if (homeSection) {
+        homeSection.scrollIntoView({ behavior: "smooth" });
+    } else {
+        window.scrollTo({ top: 0, behavior: "smooth" }); // Fallback agar home section nahi mila
+    }
 }
