@@ -15,10 +15,10 @@ st.set_page_config(
 
 # Main page heading
 st.title("Object Detection")
-url = 'file:///C:/Users/HP/OneDrive/Desktop/object%20detection%20website/p1.html'
+url = 'file:///C:/Users/HP/OneDrive/Desktop/object%20detection%20website/index.html'
 
 if st.button('About Us'):
-    webbrowser.open_new_tab("https://divy-gupta.github.io/Object_detection/")
+    webbrowser.open_new_tab("https://divy-gupta.github.io/Object-Detection/")
 
 # Sidebar
 st.sidebar.header("Settings")
@@ -44,7 +44,7 @@ source_img = None
 
 # Function to display images
 def display_image(image, caption):
-    st.image(image, caption=caption, use_column_width=True)
+    st.image(image, caption=caption, use_container_width=True)
 
 # If image is selected
 if source_radio == settings.IMAGE:
