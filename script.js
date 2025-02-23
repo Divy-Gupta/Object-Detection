@@ -144,12 +144,13 @@ function tryObjectDetection() {
     const iframe = document.getElementById("objectDetectionFrame");
     
     if (iframe) {
-        iframe.src = "http://localhost:8501/";  // Change this to your Flask app URL
+        iframe.src = "https://object-detection-4you.streamlit.app/"; // Streamlit App URL
 
-        // Show the iframe and hide the "Try" button
+        // Show the iframe and buttons
         document.getElementById("objectDetectionContainer").style.display = "block";
         document.getElementById("tryObjectDetectionBtn").style.display = "none";
         document.getElementById("closeObjectDetectionBtn").style.display = "block";
+        document.getElementById("fullScreenBtn").style.display = "block";  // Show "Full Screen" button
     } else {
         console.error('Object Detection iframe not found!');
     }
@@ -157,14 +158,18 @@ function tryObjectDetection() {
 
 function closeObjectDetection() {
     const iframe = document.getElementById("objectDetectionFrame");
-    if (iframe) {
-        iframe.src = ""; // Clear the iframe src to stop the service
 
-        // Hide the iframe and show the "Try" button
+    if (iframe) {
+        iframe.src = ""; // Reset the iframe source
         document.getElementById("objectDetectionContainer").style.display = "none";
-        document.getElementById("closeObjectDetectionBtn").style.display = "none";
         document.getElementById("tryObjectDetectionBtn").style.display = "block";
+        document.getElementById("closeObjectDetectionBtn").style.display = "none";
+        document.getElementById("fullScreenBtn").style.display = "none"; // Hide "Full Screen" button
     }
+}
+
+function openFullScreen() {
+    window.open("https://object-detection-4you.streamlit.app/", "_blank"); // Open in a new tab
 }
 
 function scrollToTop() {
