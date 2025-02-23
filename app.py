@@ -90,7 +90,8 @@ if source_radio == settings.IMAGE:
             display_image(default_detected_image_path, 'Detected Image')
 
 elif source_radio == settings.WEBCAM:
-    helper.play_webcam(confidence, model)
+    st.error(" Sorry for inconvenience but Webcam is not supported in Streamlit Cloud but we add it if u run this on localhost.")
+
 
 elif source_radio == settings.YOUTUBE:
     helper.play_youtube_video(confidence, model)
