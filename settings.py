@@ -16,10 +16,9 @@ ROOT = root_path.relative_to(Path.cwd())
 
 # Sources
 IMAGE = 'Image'
-WEBCAM = 'WebCam'
-YOUTUBE = 'YouTube'
+WEBCAM = 'WebCam
 
-SOURCES_LIST = [IMAGE,WEBCAM,YOUTUBE]
+SOURCES_LIST = [IMAGE,WEBCAM]
 
 # Images config
 IMAGES_DIR = ROOT / 'images'
