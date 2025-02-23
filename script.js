@@ -157,23 +157,6 @@ function tryObjectDetection() {
     window.open("https://object-detection-4you.streamlit.app/", "_blank");
 }
 
-
-function closeObjectDetection() {
-    const iframe = document.getElementById("objectDetectionFrame");
-
-    if (iframe) {
-        iframe.src = ""; // Reset the iframe source
-        document.getElementById("objectDetectionContainer").style.display = "none";
-        document.getElementById("tryObjectDetectionBtn").style.display = "block";
-        document.getElementById("closeObjectDetectionBtn").style.display = "none";
-        document.getElementById("fullScreenBtn").style.display = "none"; // Hide "Full Screen" button
-    }
-}
-
-function openFullScreen() {
-    window.open("https://object-detection-4you.streamlit.app/", "_blank"); // Open in a new tab
-}
-
 function scrollToTop() {
     window.scrollTo({
         top: 0,
