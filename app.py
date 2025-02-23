@@ -50,7 +50,7 @@ source_img = None
 
 # Function to display images
 def display_image(image, caption):
-    st.image(image, caption=caption, use_column_width=True)
+    st.image(image, caption=caption, use_container_width=True)
 
 # If image is selected
 if source_radio == settings.IMAGE:
@@ -88,8 +88,7 @@ if source_radio == settings.IMAGE:
             display_image(default_detected_image_path, 'Detected Image')
 
 elif source_radio == settings.WEBCAM:
-    helper.play_webcam(confidence, model)
-
+     st.write("Sorry for inconvenience but streamlit cloud doesn't support webcam!!")
 elif source_radio == settings.YOUTUBE:
     helper.play_youtube_video(confidence, model)
 
