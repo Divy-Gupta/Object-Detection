@@ -8,3 +8,4 @@ numpy
 matplotlib
 requests
 yolov5
+pytube
