@@ -4,9 +4,7 @@ try:
     asyncio.get_running_loop()
 except RuntimeError:
     asyncio.set_event_loop(asyncio.new_event_loop())
-
-import streamlit as st
-
+import streamlit
 from pathlib import Path
 import PIL.Image
 import settings
@@ -23,9 +21,10 @@ st.set_page_config(
 
 # Main page heading
 st.title("Object Detection")
-url = 'file:///C:/Users/HP/OneDrive/Desktop/object%20detection%20website/index.html'
+url = 'file:///C:/Users/HP/OneDrive/Desktop/object%20detection%20website/p1.html'
+
 if st.button('About Us'):
-    st.markdown('<a href="https://divy-gupta.github.io/Object-Detection/" target="_blank">Click here to visit About Us</a>', unsafe_allow_html=True)
+    webbrowser.open_new_tab("https://divy-gupta.github.io/Object_detection/")
 
 # Sidebar
 st.sidebar.header("Settings")
@@ -51,7 +50,7 @@ source_img = None
 
 # Function to display images
 def display_image(image, caption):
-    st.image(image, caption=caption, use_container_width=True)
+    st.image(image, caption=caption, use_column_width=True)
 
 # If image is selected
 if source_radio == settings.IMAGE:
@@ -89,8 +88,11 @@ if source_radio == settings.IMAGE:
             display_image(default_detected_image_path, 'Detected Image')
 
 elif source_radio == settings.WEBCAM:
-    st.error(" Sorry for inconvenience but Webcam is not supported in Streamlit Cloud but we add it if u run this on localhost.")
-\
+    helper.play_webcam(confidence, model)
+
+elif source_radio == settings.YOUTUBE:
+    helper.play_youtube_video(confidence, model)
 
 else:
     st.error("Please select a valid source type!")
+
