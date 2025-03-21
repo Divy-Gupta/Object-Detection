@@ -43,7 +43,6 @@ pip install streamlit opencv-python numpy torch torchvision requests
    streamlit run app.py
    ```
 4. Open the provided local URL in your browser.
-5. 
 ## 🖼️ Screenshots
 <img src="https://deeplobe.ai/wp-content/uploads/2023/06/Object-detection-Real-world-applications-and-benefits.png" alt="Object Detection Demo" width="500" height="300">
 
